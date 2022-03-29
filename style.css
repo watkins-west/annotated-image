@@ -1,0 +1,269 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+
+
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+
+
+/** SET BORDER BOX EVERYWHERE */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/** APPLY BASE TAG STYLES */
+
+body,
+html {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: 'Georgia', sans-serif;
+}
+
+
+/** RESPONSIVE IMAGES */
+
+figure,
+img {
+    /* Sets image width to match parent */
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+header {
+    margin-bottom: 16px;
+}
+
+header p {
+    margin: 0;
+}
+
+/*
+.collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.collage > .img {
+    flex-basis: calc(50% - 1px);
+}
+
+.collage > .img:nth-child(1), 
+.collage > .img:nth-child(2) {
+    padding-bottom: 2px;
+}
+
+/** Caption styles */
+
+.caption,
+figcaption {
+    font-size: 0.9rem;
+    color: #8e8a8a;
+    padding: 5px 0;
+}
+
+
+/** BASE CLASSES */
+
+
+/** Container styles to keep content from becoming too wide or coming too close to
+* mobile edge */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+
+/** Images are allowed to be a little wider when broken out into their own container */
+
+.container.image {
+    max-width: 1200px;
+    padding: 0;
+}
+
+.container.image .caption,
+.container.image figcaption {
+    padding: 5px 10px;
+}
+
+/* Styles for all of the dots */
+.dot {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+   
+.dot .inner,
+.dot .close {
+    display: none;
+}
+
+.annotate {
+    position: relative;
+}
+
+.dot.active {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.dot.active .inner,
+.dot.active .close {
+    display: block;
+}
+
+/* Styles for specific dots */
+/* Shanghai */
+.pink {
+    background-color: rgba(255, 127, 80, 0.75)
+}
+
+#shanghai:not(.active) {
+    top: 28.9%;
+    right: 22.95%;
+}
+
+/* Singapore */
+
+.green {
+    background-color: rgba(46, 204, 113, 0.75)
+}
+
+#singapore:not(.active) {
+    top: 46.8%;
+    right: 27%;
+}
+
+/* Pearl River Ports */
+
+.purple {
+    background-color: rgba(165, 55, 253, 0.75)
+}
+
+#pearl-river:not(.active) {
+    top: 33.7%;
+    right: 24.6%;
+}
+
+/* Busan */
+
+.red {
+    background-color: rgba(255, 0, 0, 0.75)
+}
+
+#busan:not(.active) {
+    top: 26.2%;
+    right: 21.4%;
+}
+
+/* Rotterdam */
+
+.blue {
+    background-color: rgba(0, 110, 222, 0.75)
+}
+
+#rotterdam:not(.active) {
+    top: 16.5%;
+    left: 41.8%;
+}
+
+/* NYNJ */
+
+.pink {
+    background-color: rgba(255, 96, 199, 0.75)
+}
+
+#nynj:not(.active) {
+    top: 22.5%;
+    left: 19.8%;
+}
+
+/* LA */
+
+.yellow {
+    background-color: rgba(245, 248, 54, 0.85)
+}
+
+#los-angeles:not(.active) {
+    top: 26.9%;
+    left: 6.2%;
+}
+
+
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+}
+
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 769px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+}
+
+
+/*********************************************************************
+  YOUR MEDIUM-DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 805px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container {
+        padding: 0;
+    }
+}
+
+
+/*********************************************************************
+  YOUR LARGE DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+
+@media(min-width: 1205px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 769px or larger -- so desktop */
+    .container.image .caption,
+    .container.image figcaption {
+        padding: 5px 0;
+    }
+}
