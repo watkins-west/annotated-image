@@ -33,6 +33,7 @@ html {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 16px;
     font-family: 'Georgia', sans-serif;
+    background-color: antiquewhite;
 }
 
 
@@ -80,7 +81,7 @@ header p {
 figcaption {
     font-size: 0.9rem;
     color: #8e8a8a;
-    padding: 5px 0;
+    padding: 0;
 }
 
 
@@ -105,15 +106,16 @@ figcaption {
     padding: 0;
 }
 
+/*
 .container.image .caption,
 .container.image figcaption {
     padding: 5px 10px;
-}
+} */
 
 /* Styles for all of the dots */
 .dot {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border: 1px solid #fff;
     border-radius: 50%;
     position: absolute;
@@ -136,6 +138,7 @@ figcaption {
     right: 0;
     left: 0;
     bottom: 0;
+    z-index: 2;
 }
 
 .dot.active .inner,
@@ -150,8 +153,8 @@ figcaption {
 }
 
 #shanghai:not(.active) {
-    top: 28.9%;
-    right: 22.95%;
+    top: 28.4%;
+    right: 22.5%;
 }
 
 /* Singapore */
@@ -162,7 +165,7 @@ figcaption {
 
 #singapore:not(.active) {
     top: 46.8%;
-    right: 27%;
+    right: 26%;
 }
 
 /* Pearl River Ports */
@@ -172,8 +175,8 @@ figcaption {
 }
 
 #pearl-river:not(.active) {
-    top: 33.7%;
-    right: 24.6%;
+    top: 33%;
+    right: 24%;
 }
 
 /* Busan */
@@ -183,8 +186,8 @@ figcaption {
 }
 
 #busan:not(.active) {
-    top: 26.2%;
-    right: 21.4%;
+    top: 26%;
+    right: 20%;
 }
 
 /* Rotterdam */
@@ -194,8 +197,8 @@ figcaption {
 }
 
 #rotterdam:not(.active) {
-    top: 16.5%;
-    left: 41.8%;
+    top: 16%;
+    left: 41%;
 }
 
 /* NYNJ */
@@ -205,8 +208,8 @@ figcaption {
 }
 
 #nynj:not(.active) {
-    top: 22.5%;
-    left: 19.8%;
+    top: 21%;
+    left: 18.7%;
 }
 
 /* LA */
@@ -216,8 +219,8 @@ figcaption {
 }
 
 #los-angeles:not(.active) {
-    top: 26.9%;
-    left: 6.2%;
+    top: 26.5%;
+    left: 5.7%;
 }
 
 
@@ -229,6 +232,51 @@ figcaption {
 @media(min-width: 681px) {
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+    .dot {
+        width: 15px;
+        height: 15px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+#shanghai:not(.active) {
+    top: 28.9%;
+    right: 22.95%;
+}
+
+#singapore:not(.active) {
+    top: 46.8%;
+    right: 27%;
+}
+
+#pearl-river:not(.active) {
+    top: 33.7%;
+    right: 24.6%;
+}
+
+#busan:not(.active) {
+    top: 26.2%;
+    right: 21.4%;
+}
+
+#rotterdam:not(.active) {
+    top: 16.5%;
+    left: 41.8%;
+}
+
+#nynj:not(.active) {
+    top: 22.5%;
+    left: 19.8%;
+}
+
+#los-angeles:not(.active) {
+    top: 26.9%;
+    left: 6.2%;
+}
+
+
 }
 
 
