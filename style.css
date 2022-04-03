@@ -59,22 +59,6 @@ header p {
     margin: 0;
 }
 
-/*
-.collage {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.collage > .img {
-    flex-basis: calc(50% - 1px);
-}
-
-.collage > .img:nth-child(1), 
-.collage > .img:nth-child(2) {
-    padding-bottom: 2px;
-}
-
 /** Caption styles */
 
 .caption,
